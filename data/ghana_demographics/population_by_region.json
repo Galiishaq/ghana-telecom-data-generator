@@ -1,0 +1,164 @@
+{
+  "source": "Ghana Statistical Service 2021 Population and Housing Census",
+  "url": "https://statsghana.gov.gh/gssmain/fileUpload/pressrelease/2021%20PHC%20General%20Report%20Vol%203A_Population%20of%20Regions%20and%20Districts_181121.pdf",
+  "extraction_date": "2025-11-07",
+  "census_date": "June 27, 2021",
+  
+  "total_population_millions": 30.832019,
+  
+  "regions": [
+    {
+      "name": "Greater Accra",
+      "population": 5455692,
+      "percent_of_total": 17.7,
+      "urban_population": 5001141,
+      "rural_population": 454551,
+      "urban_percent": 91.7,
+      "rural_percent": 8.3
+    },
+    {
+      "name": "Ashanti",
+      "population": 5440463,
+      "percent_of_total": 17.6,
+      "urban_population": 3353850,
+      "rural_population": 2086613,
+      "urban_percent": 61.6,
+      "rural_percent": 38.4
+    },
+    {
+      "name": "Eastern",
+      "population": 2925653,
+      "percent_of_total": 9.5,
+      "urban_population": 1505820,
+      "rural_population": 1419833,
+      "urban_percent": 51.5,
+      "rural_percent": 48.5
+    },
+    {
+      "name": "Central",
+      "population": 2859821,
+      "percent_of_total": 9.3,
+      "urban_population": 1654703,
+      "rural_population": 1205118,
+      "urban_percent": 57.9,
+      "rural_percent": 42.1
+    },
+    {
+      "name": "Northern",
+      "population": 2310939,
+      "percent_of_total": 7.5,
+      "urban_population": 1095808,
+      "rural_population": 1215131,
+      "urban_percent": 47.4,
+      "rural_percent": 52.6
+    },
+    {
+      "name": "Western",
+      "population": 2060585,
+      "percent_of_total": 6.7,
+      "urban_population": 1062865,
+      "rural_population": 997720,
+      "urban_percent": 51.6,
+      "rural_percent": 48.4
+    },
+    {
+      "name": "Volta",
+      "population": 1659040,
+      "percent_of_total": 5.4,
+      "urban_population": 698329,
+      "rural_population": 960711,
+      "urban_percent": 42.1,
+      "rural_percent": 57.9
+    },
+    {
+      "name": "Upper East",
+      "population": 1301226,
+      "percent_of_total": 4.2,
+      "urban_population": 330258,
+      "rural_population": 970968,
+      "urban_percent": 25.4,
+      "rural_percent": 74.6
+    },
+    {
+      "name": "Bono",
+      "population": 1208649,
+      "percent_of_total": 3.9,
+      "urban_population": 708481,
+      "rural_population": 500168,
+      "urban_percent": 58.6,
+      "rural_percent": 41.4
+    },
+    {
+      "name": "Bono East",
+      "population": 1203400,
+      "percent_of_total": 3.9,
+      "urban_population": 633255,
+      "rural_population": 570145,
+      "urban_percent": 52.6,
+      "rural_percent": 47.4
+    },
+    {
+      "name": "Upper West",
+      "population": 901502,
+      "percent_of_total": 2.9,
+      "urban_population": 238284,
+      "rural_population": 663218,
+      "urban_percent": 26.4,
+      "rural_percent": 73.6
+    },
+    {
+      "name": "Western North",
+      "population": 880921,
+      "percent_of_total": 2.9,
+      "urban_population": 262428,
+      "rural_population": 618493,
+      "urban_percent": 29.8,
+      "rural_percent": 70.2
+    },
+    {
+      "name": "Oti",
+      "population": 747248,
+      "percent_of_total": 2.4,
+      "urban_population": 243869,
+      "rural_population": 503379,
+      "urban_percent": 32.6,
+      "rural_percent": 67.4
+    },
+    {
+      "name": "North East",
+      "population": 658946,
+      "percent_of_total": 2.1,
+      "urban_population": 214946,
+      "rural_population": 444000,
+      "urban_percent": 32.6,
+      "rural_percent": 67.4
+    },
+    {
+      "name": "Savannah",
+      "population": 653266,
+      "percent_of_total": 2.1,
+      "urban_population": 193579,
+      "rural_population": 459687,
+      "urban_percent": 29.6,
+      "rural_percent": 70.4
+    },
+    {
+      "name": "Ahafo",
+      "population": 564668,
+      "percent_of_total": 1.8,
+      "urban_population": 274914,
+      "rural_population": 289754,
+      "urban_percent": 48.7,
+      "rural_percent": 51.3
+    }
+  ],
+  
+  "summary_statistics": {
+    "total_urban_population": 17472530,
+    "total_rural_population": 13359489,
+    "urban_percent": 56.7,
+    "rural_percent": 43.3,
+    "average_household_size": 3.6,
+    "population_density_per_sq_km": 129
+  }
+}

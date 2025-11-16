@@ -1,0 +1,304 @@
+{
+  "metadata": {
+    "created_date": "2025-11-07",
+    "period": "Q4 2024",
+    "purpose": "Master validation dataset for MTN Ghana synthetic customer generation",
+    "data_sources": [
+      "NCA Q4 2024 Statistical Bulletin",
+      "MTN Ghana 2024 Full Year Financial Report",
+      "Ghana Statistical Service 2021 Population Census"
+    ]
+  },
+  
+  "market_size": {
+    "total_mobile_subscribers": {
+      "value": 38.408712,
+      "unit": "Millions",
+      "source": "NCA Q4 2024",
+      "source_page": "Page 15"
+    },
+    "mtn_subscribers": {
+      "value": 28.408649,
+      "unit": "Millions",
+      "source": "NCA Q4 2024",
+      "source_page": "Page 15",
+      "note": "Aligns with MTN report: 28.5M"
+    },
+    "mtn_market_share": {
+      "value": 73.96,
+      "unit": "Percent",
+      "source": "NCA Q4 2024",
+      "source_page": "Page 16"
+    },
+    "telecel_subscribers": {
+      "value": 6.968464,
+      "unit": "Millions",
+      "source": "NCA Q4 2024",
+      "source_page": "Page 15"
+    },
+    "telecel_market_share": {
+      "value": 18.14,
+      "unit": "Percent",
+      "source": "NCA Q4 2024",
+      "source_page": "Page 16"
+    },
+    "at_subscribers": {
+      "value": 3.031599,
+      "unit": "Millions",
+      "source": "NCA Q4 2024",
+      "source_page": "Page 15"
+    },
+    "at_market_share": {
+      "value": 7.89,
+      "unit": "Percent",
+      "source": "NCA Q4 2024",
+      "source_page": "Page 16"
+    },
+    "total_data_subscribers": {
+      "value": 26.127592,
+      "unit": "Millions",
+      "source": "NCA Q4 2024",
+      "source_page": "Page 22-23"
+    },
+    "mtn_data_subscribers": {
+      "value": 20.626311,
+      "unit": "Millions",
+      "source": "NCA Q4 2024",
+      "source_page": "Page 22-23",
+      "note": "MTN reports 17.5M active data users (>5MB/month)"
+    },
+    "mobile_penetration_rate": {
+      "value": 116.07,
+      "unit": "Percent",
+      "source": "NCA Q4 2024",
+      "source_page": "Page 15",
+      "calculation": "Total subscribers / Total population * 100"
+    }
+  },
+  
+  "usage_metrics": {
+    "avg_data_usage_per_sub": {
+      "value": 29463.00,
+      "unit": "MB/month",
+      "source": "NCA Q4 2024",
+      "source_page": "Page 24",
+      "note": "Industry average across all operators"
+    },
+    "avg_voice_mou": {
+      "value": 757.52,
+      "unit": "Minutes/month",
+      "source": "NCA Q4 2024",
+      "source_page": "Page 18-19"
+    },
+    "avg_sms_per_sub": {
+      "value": 29,
+      "unit": "SMS/month",
+      "source": "NCA Q4 2024",
+      "source_page": "Page 20-21"
+    },
+    "total_domestic_voice_traffic": {
+      "value": 29.358895,
+      "unit": "Billions of minutes",
+      "source": "NCA Q4 2024",
+      "source_page": "Page 18"
+    }
+  },
+  
+  "subscription_structure": {
+    "prepaid_percent": {
+      "value": 98.92,
+      "unit": "Percent",
+      "source": "NCA Q4 2024",
+      "source_page": "Page 16"
+    },
+    "postpaid_percent": {
+      "value": 1.08,
+      "unit": "Percent",
+      "source": "NCA Q4 2024",
+      "source_page": "Page 16"
+    }
+  },
+  
+  "demographics": {
+    "total_population_ghana": {
+      "value": 30.832019,
+      "unit": "Millions",
+      "source": "GSS 2021 Census",
+      "source_page": "N/A"
+    },
+    "population_by_region": {
+      "greater_accra": {
+        "value": 5.455692,
+        "percent": 17.7,
+        "urban_percent": 91.7
+      },
+      "ashanti": {
+        "value": 5.440463,
+        "percent": 17.6,
+        "urban_percent": 61.6
+      },
+      "eastern": {
+        "value": 2.925653,
+        "percent": 9.5,
+        "urban_percent": 51.5
+      },
+      "central": {
+        "value": 2.859821,
+        "percent": 9.3,
+        "urban_percent": 57.9
+      },
+      "northern": {
+        "value": 2.310939,
+        "percent": 7.5,
+        "urban_percent": 47.4
+      },
+      "western": {
+        "value": 2.060585,
+        "percent": 6.7,
+        "urban_percent": 51.6
+      },
+      "volta": {
+        "value": 1.659040,
+        "percent": 5.4,
+        "urban_percent": 42.1
+      },
+      "upper_east": {
+        "value": 1.301226,
+        "percent": 4.2,
+        "urban_percent": 25.4
+      },
+      "bono": {
+        "value": 1.208649,
+        "percent": 3.9,
+        "urban_percent": 58.6
+      },
+      "bono_east": {
+        "value": 1.203400,
+        "percent": 3.9,
+        "urban_percent": 52.6
+      },
+      "upper_west": {
+        "value": 0.901502,
+        "percent": 2.9,
+        "urban_percent": 26.4
+      },
+      "western_north": {
+        "value": 0.880921,
+        "percent": 2.9,
+        "urban_percent": 29.8
+      },
+      "oti": {
+        "value": 0.747248,
+        "percent": 2.4,
+        "urban_percent": 32.6
+      },
+      "north_east": {
+        "value": 0.658946,
+        "percent": 2.1,
+        "urban_percent": 32.6
+      },
+      "savannah": {
+        "value": 0.653266,
+        "percent": 2.1,
+        "urban_percent": 29.6
+      },
+      "ahafo": {
+        "value": 0.564668,
+        "percent": 1.8,
+        "urban_percent": 48.7
+      }
+    },
+    "urban_population_percent": {
+      "value": 56.7,
+      "unit": "Percent",
+      "source": "GSS 2021 Census"
+    }
+  },
+  
+  "financial_metrics": {
+    "mtn_total_service_revenue": {
+      "value": 17888.543,
+      "unit": "GH₵ Millions (annual)",
+      "source": "MTN Ghana 2024 Report",
+      "source_page": "Page 1"
+    },
+    "mtn_voice_revenue": {
+      "value": 3530.383,
+      "unit": "GH₵ Millions (annual)",
+      "source": "MTN Ghana 2024 Report",
+      "source_page": "Annexure, Page 19"
+    },
+    "mtn_data_revenue": {
+      "value": 8978.582,
+      "unit": "GH₵ Millions (annual)",
+      "source": "MTN Ghana 2024 Report",
+      "source_page": "Annexure, Page 19"
+    },
+    "mtn_momo_revenue": {
+      "value": 4448.917,
+      "unit": "GH₵ Millions (annual)",
+      "source": "MTN Ghana 2024 Report",
+      "source_page": "Annexure, Page 19"
+    },
+    "estimated_mtn_total_arpu": {
+      "value": 52.36,
+      "unit": "GH₵/month",
+      "source": "Calculated",
+      "calculation": "(17888.543M / 12 months) / 28.5M subscribers",
+      "note": "Estimated"
+    },
+    "estimated_mtn_voice_arpu": {
+      "value": 10.32,
+      "unit": "GH₵/month",
+      "source": "Calculated",
+      "calculation": "(3530.383M / 12 months) / 28.5M subscribers",
+      "note": "Estimated"
+    },
+    "estimated_mtn_data_arpu": {
+      "value": 26.23,
+      "unit": "GH₵/month",
+      "source": "Calculated",
+      "calculation": "(8978.582M / 12 months) / 28.5M subscribers",
+      "note": "Estimated"
+    },
+    "estimated_mtn_momo_arpu": {
+      "value": 15.81,
+      "unit": "GH₵/month",
+      "source": "Calculated",
+      "calculation": "(4448.917M / 12 months) / 28.5M subscribers",
+      "note": "Estimated - MoMo users 17.2M"
+    }
+  },
+  
+  "market_context": {
+    "ghana_inflation_2024_avg": {
+      "value": 22.9,
+      "unit": "Percent",
+      "source": "MTN Ghana Report"
+    },
+    "cedi_depreciation_2024": {
+      "value": 19.2,
+      "unit": "Percent vs USD",
+      "source": "MTN Ghana Report"
+    },
+    "mtn_ebitda_margin": {
+      "value": 57.1,
+      "unit": "Percent",
+      "source": "MTN Ghana Report"
+    }
+  },
+  
+  "validation_calculations": {
+    "mobile_penetration_check": {
+      "calculation": "(38.408712M / 30.832019M) * 100",
+      "result": 124.6,
+      "nca_reported": 116.07,
+      "note": "Difference due to NCA using estimated 33.09M Q4 2024 population projection"
+    },
+    "avg_data_gb_per_sub": {
+      "calculation": "29463 MB / 1024",
+      "result": 28.77,
+      "unit": "GB/month"
+    }
+  }
+}

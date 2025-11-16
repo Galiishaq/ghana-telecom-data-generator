@@ -1,0 +1,69 @@
+{
+  "source": "NCA Q4 2024 Statistical Bulletin",
+  "url": "https://nca.org.gh/wp-content/uploads/2025/06/Q4-2024-Statistical-Bulletin.pdf",
+  "extraction_date": "2025-11-07",
+  "quarter": "Q4 2024",
+  
+  "mobile_voice": {
+    "operators": {
+      "MTN": {
+        "subscribers_millions": 28.408649,
+        "market_share_percent": 73.96
+      },
+      "Telecel": {
+        "subscribers_millions": 6.968464,
+        "market_share_percent": 18.14
+      },
+      "AT": {
+        "subscribers_millions": 3.031599,
+        "market_share_percent": 7.89
+      }
+    },
+    "total_subscribers_millions": 38.408712,
+    "prepaid_percent": 98.92,
+    "postpaid_percent": 1.08,
+    "page": "15-16"
+  },
+  
+  "mobile_data": {
+    "operators": {
+      "MTN": {
+        "data_subscribers_millions": 20.626311,
+        "market_share_percent": 78.94
+      },
+      "Telecel": {
+        "data_subscribers_millions": 3.892046,
+        "market_share_percent": 14.90
+      },
+      "AT": {
+        "data_subscribers_millions": 1.609235,
+        "market_share_percent": 6.16
+      }
+    },
+    "total_data_subscribers_millions": 26.127592,
+    "page": "22-23"
+  },
+  
+  "data_usage": {
+    "average_monthly_mb_per_sub": 29463.00,
+    "page": 24
+  },
+  
+  "voice_traffic": {
+    "total_domestic_billions_minutes": 29.358895152,
+    "average_mou_per_subscription": 757.52,
+    "page": "18-19"
+  },
+  
+  "sms": {
+    "total_traffic_millions": 1108.115673,
+    "average_per_subscription": 29,
+    "page": "20-21"
+  },
+  
+  "additional_metrics": {
+    "population_millions": 33.089811,
+    "mobile_penetration_rate_percent": 116.07,
+    "mobile_data_penetration_rate_percent": 78.96
+  }
+}

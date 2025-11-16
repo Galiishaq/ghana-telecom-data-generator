@@ -1,0 +1,52 @@
+{
+  "source": "MTN Ghana 2024 Full Year Financial Report",
+  "url": "https://mtn.com.gh/wp-content/uploads/2025/02/MTN-Ghana-2024-Full-Year-Financial-Report.pdf",
+  "extraction_date": "2025-11-07",
+  "period": "Full Year 2024",
+  
+  "subscribers": {
+    "total_mobile_subscribers_millions": 28.5,
+    "active_data_subscribers_millions": 17.5,
+    "active_momo_users_millions": 17.2
+  },
+  
+  "revenue_by_segment_ghs_millions": {
+    "voice": 3530.383,
+    "data": 8978.582,
+    "momo": 4448.917,
+    "digital": 228.2,
+    "total_service_revenue": 17888.543
+  },
+  
+  "arpu_estimates": {
+    "total_arpu_ghs_per_month": 52.36,
+    "voice_arpu_ghs_per_month": 10.32,
+    "data_arpu_ghs_per_month": 42.81,
+    "note": "ARPU calculated as (annual revenue / 12 months / subscribers)"
+  },
+  
+  "quarterly_breakdown_q4_2024_ghs_millions": {
+    "voice": 912.906,
+    "data": 2639.486,
+    "momo": 1348.599
+  },
+  
+  "financial_metrics": {
+    "ebitda_ghs_millions": 10240.725,
+    "ebitda_margin_percent": 57.1,
+    "profit_after_tax_ghs_millions": 5028.736,
+    "capex_ghs_millions": 4393.317,
+    "capex_ex_lease_ghs_millions": 3130.355
+  },
+  
+  "usage_metrics": {
+    "data_usage_gb_per_user_month": 10.7,
+    "note": "From Q4 2024 presentation showing GB per user/month"
+  },
+  
+  "market_context": {
+    "ghana_inflation_2024_average_percent": 22.9,
+    "ghana_inflation_2023_average_percent": 40.3,
+    "cedi_depreciation_vs_usd_2024_percent": 19.2
+  }
+}
