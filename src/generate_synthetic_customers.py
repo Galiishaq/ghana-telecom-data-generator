@@ -27,7 +27,6 @@ RISK_WEIGHTS = {
     'low_usage': 30,
     'moderate_low_usage': 15,
     'high_engagement': -10,
-    'failed_payment': 15,
     'high_support': 25,
     'moderate_support': 15,
     'low_support': -5,
@@ -78,7 +77,6 @@ class CustomerSegment:
     avg_tenure: float
     arpu_range: tuple[float, float]
     usage_range: tuple[float, float]
-    p_failed_payment: float
     support_lambda: float
     p_postpaid: float
 
@@ -109,7 +107,6 @@ class Revenue:
 
 @dataclass
 class Behavior:
-    failed_payments: int
     support_calls: int
     plan_changes: int
     recharge_freq: int
@@ -143,7 +140,6 @@ class Customer:
             'estimated_monthly_arpu_gh': round(self.revenue.total_arpu, 2),
             'voice_revenue_gh': round(self.revenue.voice, 2),
             'data_revenue_gh': round(self.revenue.data, 2),
-            'failed_payments': self.behavior.failed_payments,
             'support_calls_last_3months': self.behavior.support_calls,
             'plan_changes_last_year': self.behavior.plan_changes,
             'recharge_frequency_monthly': self.behavior.recharge_freq,
@@ -162,11 +158,11 @@ class Customer:
 def define_segments():
     """Return the five customer segment profiles."""
     return [
-        CustomerSegment('loyal_champions', 0.15, 0.02, 36, (1.5, 2.5), (1.3, 2.0), 0.01, 1.5, 0.15),
-        CustomerSegment('satisfied_majority', 0.50, 0.05, 18, (0.8, 1.2), (0.8, 1.2), 0.03, 2.5, 0.01),
-        CustomerSegment('at_risk', 0.20, 0.25, 12, (0.4, 0.7), (0.3, 0.6), 0.20, 6.0, 0.005),
-        CustomerSegment('price_sensitive', 0.10, 0.15, 15, (0.5, 0.8), (0.6, 0.9), 0.08, 3.5, 0.002),
-        CustomerSegment('new_exploring', 0.05, 0.18, 6, (0.7, 1.3), (0.5, 1.5), 0.10, 4.0, 0.005),
+        CustomerSegment('loyal_champions', 0.15, 0.02, 36, (1.5, 2.5), (1.3, 2.0), 1.5, 0.15),
+        CustomerSegment('satisfied_majority', 0.50, 0.05, 18, (0.8, 1.2), (0.8, 1.2), 2.5, 0.01),
+        CustomerSegment('at_risk', 0.20, 0.25, 12, (0.4, 0.7), (0.3, 0.6), 6.0, 0.005),
+        CustomerSegment('price_sensitive', 0.10, 0.15, 15, (0.5, 0.8), (0.6, 0.9), 3.5, 0.002),
+        CustomerSegment('new_exploring', 0.05, 0.18, 6, (0.7, 1.3), (0.5, 1.5), 4.0, 0.005),
     ]
 
 
@@ -273,10 +269,6 @@ def calculate_revenue(usage, demographics, segment, rng):
 
 def sample_behavior(demographics, segment, usage, rng):
     """Sample behavioral indicators correlated with segment."""
-    # Failed payments
-    p_fail = segment.p_failed_payment * (2.0 if demographics.subscription == 'prepaid' else 1.0)
-    failed_payments = rng.choice([0, 1, 2, 3], p=[1-p_fail, p_fail*0.6, p_fail*0.3, p_fail*0.1])
-
     # Support calls (higher in rural areas)
     lambda_support = segment.support_lambda * (1.4 if demographics.locality == 'rural' else 1.0)
     support_calls = min(rng.poisson(lambda_support), 15)
@@ -303,7 +295,7 @@ def sample_behavior(demographics, segment, usage, rng):
     social_pct = rng.uniform(0.25, 0.55) if demographics.device == 'smartphone' else 0.1
     social_data_gb = usage.data_gb * social_pct
 
-    return Behavior(failed_payments, support_calls, plan_changes, recharge_freq, night_user, social_data_gb)
+    return Behavior(support_calls, plan_changes, recharge_freq, night_user, social_data_gb)
 
 
 def calculate_churn_risk(customer, segment, constraints):
@@ -324,8 +316,7 @@ def calculate_churn_risk(customer, segment, constraints):
     elif avg_usage > 1.5:
         score += RISK_WEIGHTS['high_engagement']
 
-    # Payment and support issues
-    score += customer.behavior.failed_payments * RISK_WEIGHTS['failed_payment']
+    # Support issues
     if customer.behavior.support_calls > 7:
         score += RISK_WEIGHTS['high_support']
     elif customer.behavior.support_calls > 4:

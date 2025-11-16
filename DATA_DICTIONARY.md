@@ -1,7 +1,7 @@
 # Data Dictionary: MTN Synthetic Customer Dataset
 
 ## Overview
-This document describes all 21 features in the synthetic customer dataset (`mtn_synthetic_customers_100k.csv`).
+This document describes all 20 features in the synthetic customer dataset (`ghana_telecom_customers.csv`).
 
 ---
 
@@ -192,19 +192,6 @@ This document describes all 21 features in the synthetic customer dataset (`mtn_
 
 ### 5. BEHAVIORAL INDICATORS
 
-#### `failed_payments`
-- **Type:** Integer
-- **Range:** 0 - 3
-- **Unit:** Count of failed payment attempts
-- **Description:** Number of unsuccessful payment/recharge attempts in recent period
-- **Generation:** Segment-based probability:
-  - Loyal Champions: 1% base probability
-  - At-Risk: 20% base probability
-  - Prepaid: 2x multiplier
-  - If triggered: 60% chance of 1 failure, 30% chance of 2, 10% chance of 3
-- **Churn Impact:** **+15 risk points per failed payment** (strong predictor)
-- **Business Use:** Payment plan offers, grace period policies, collection strategy
-
 #### `support_calls_last_3months`
 - **Type:** Integer
 - **Range:** 0 - 15
@@ -320,17 +307,12 @@ When using this dataset for ML, consider creating:
    arpu_per_gb = estimated_monthly_arpu_gh / (monthly_data_usage_gb + 0.1)
    ```
 
-3. **Payment Health:**
-   ```python
-   payment_health = 1 if failed_payments == 0 else 0
-   ```
-
-4. **Support Burden Flag:**
+3. **Support Burden Flag:**
    ```python
    high_support = 1 if support_calls_last_3months > 5 else 0
    ```
 
-5. **Engagement Level:**
+4. **Engagement Level:**
    ```python
    engagement = tenure_months * (usage_score + night_data_user)
    ```
@@ -402,7 +384,8 @@ segment_summary = df.groupby('customer_segment').agg({
 
 ## Version History
 
-- **v1.0 (2025-11-15):** Initial release with 100,000 customers, 21 features
+- **v1.1 (2025-11-16):** Removed `failed_payments` feature - not applicable to Ghana's prepaid market
+- **v1.0 (2025-11-15):** Initial release
 - **Methodology:** Advanced causal modeling with multi-factor churn risk scoring
 
 ---
